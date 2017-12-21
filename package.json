@@ -1,0 +1,19 @@
+{
+  "name": "parsefeed",
+  "version": "1.0.0",
+  "description": "the easy way to parse a feed/rss with promise/async function",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "feedparser": "^2.2.7",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "@types/feedparser": "^2.2.1",
+    "@types/request": "^2.0.9"
+  }
+}
