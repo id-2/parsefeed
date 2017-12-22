@@ -6,7 +6,7 @@ const request = require("request");
  * parse feed and return items (async)
  * @param URL feed url
  */
-module.exports = function parseFeed(URL) {
+function parseFeed(URL) {
     return new Promise((resolve, reject) => {
         const items = [];
         let res;
@@ -32,4 +32,5 @@ module.exports = function parseFeed(URL) {
         res.on("error", (err) => reject(err));
         res.pipe(fp);
     });
-};
+}
+exports.parseFeed = parseFeed;
