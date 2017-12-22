@@ -5,7 +5,7 @@ import * as request from "request";
  * parse feed and return items (async)
  * @param URL feed url
  */
-export default function parseFeed(URL: string): Promise<feedparser.Item[]> {
+module.exports = function parseFeed(URL: string): Promise<feedparser.Item[]> {
     return new Promise((resolve, reject) => {
         const items: feedparser.Item[] = [];
         let res: request.Request;
