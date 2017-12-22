@@ -9,7 +9,7 @@ npm i parsefeed
 # How to use
 
 ```javascript
-const parseFeed = require("parsefeed");
+const { parseFeed } = require("parsefeed");
 
 parseFeed("http://example.com/feed").then((items) => {
     for (const item of items) {
