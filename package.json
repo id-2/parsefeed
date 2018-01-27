@@ -3,6 +3,7 @@
   "version": "1.3.1",
   "description": "the easy way to parse a feed/rss with promise/async function",
   "main": "./build/parser.js",
+  "typings": "./build/parser.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
