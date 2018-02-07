@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const feedparser = require("feedparser");
-const request = require("request");
+const got = require("got");
 /**
  * parse feed and return items (async)
  * @param URL feed url
@@ -9,14 +9,7 @@ const request = require("request");
 function parseFeed(URL) {
     return new Promise((resolve, reject) => {
         const items = [];
-        let res;
-        try {
-            res = request({ url: URL, timeout: 20000 });
-        }
-        catch (e) {
-            reject(e);
-            return;
-        }
+        const res = got.stream(URL, { timeout: 20000 });
         const fp = new feedparser({});
         fp.on("readable", () => {
             while (true) {

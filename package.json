@@ -10,10 +10,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@types/feedparser": "^2.2.1",
-    "@types/request": "^2.0.9",
     "feedparser": "^2.2.7",
-    "request": "^2.83.0"
+    "got": "^8.0.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/feedparser": "^2.2.1",
+    "@types/got": "^7.1.6"
+  }
 }

@@ -1,5 +1,5 @@
 import * as feedparser from "feedparser";
-import * as request from "request";
+import * as got from "got";
 
 /**
  * parse feed and return items (async)
@@ -8,13 +8,7 @@ import * as request from "request";
 export function parseFeed(URL: string): Promise<feedparser.Item[]> {
     return new Promise((resolve, reject) => {
         const items: feedparser.Item[] = [];
-        let res: request.Request;
-        try {
-            res = request({url: URL, timeout: 20000});
-        } catch (e) {
-            reject(e);
-            return ;
-        }
+        const res = got.stream(URL, { timeout: 20000 });
         const fp = new feedparser({});
         fp.on("readable", () => {
             while (true) {
