@@ -9,7 +9,7 @@ const got = require("got");
 function parseFeed(URL) {
     return new Promise((resolve, reject) => {
         const items = [];
-        const res = got.stream(URL, { timeout: 20000 });
+        const res = got.stream(URL);
         const fp = new feedparser({});
         fp.on("readable", () => {
             while (true) {

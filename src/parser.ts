@@ -8,7 +8,7 @@ import * as got from "got";
 export function parseFeed(URL: string): Promise<feedparser.Item[]> {
     return new Promise((resolve, reject) => {
         const items: feedparser.Item[] = [];
-        const res = got.stream(URL, { timeout: 20000 });
+        const res = got.stream(URL);
         const fp = new feedparser({});
         fp.on("readable", () => {
             while (true) {
