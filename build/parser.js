@@ -6,10 +6,10 @@ const got = require("got");
  * parse feed and return items (async)
  * @param URL feed url
  */
-function parseFeed(URL) {
+function parseFeed(URL, option) {
     return new Promise((resolve, reject) => {
         const items = [];
-        const res = got.stream(URL);
+        const res = got.stream(URL, option);
         const fp = new feedparser({});
         fp.on("readable", () => {
             while (true) {

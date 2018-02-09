@@ -5,10 +5,10 @@ import * as got from "got";
  * parse feed and return items (async)
  * @param URL feed url
  */
-export function parseFeed(URL: string): Promise<feedparser.Item[]> {
+export function parseFeed(URL: string, option?: got.GotOptions<string|null>): Promise<feedparser.Item[]> {
     return new Promise((resolve, reject) => {
         const items: feedparser.Item[] = [];
-        const res = got.stream(URL);
+        const res = got.stream(URL, option);
         const fp = new feedparser({});
         fp.on("readable", () => {
             while (true) {
