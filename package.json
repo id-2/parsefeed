@@ -1,6 +1,6 @@
 {
   "name": "parsefeed",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "the easy way to parse a feed/rss with promise/async function",
   "main": "./build/parser.js",
   "typings": "./build/parser.d.ts",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "feedparser": "^2.2.7",
-    "got": "^8.0.3"
+    "got": "^9.6.0"
   },
   "devDependencies": {
     "@types/feedparser": "^2.2.1",
